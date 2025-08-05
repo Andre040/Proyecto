@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Para Bee:)</title>
+  <title>¡Feliz Cumple Sofi!</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
@@ -86,20 +86,18 @@
   </style>
 </head>
 <body>
+<audio id="musica-fondo" src="ruta/de/tu/musica.mp3" autoplay loop></audio>
 
 <script>
   const textos = [];
   const palabras = [
-    "Respira",
-    "Eres suficiente",
-    "No estás sola",
-    "Un paso a la vez",
-    "Sé amable contigo",
-    "Te mando un abrazo",
-    "Lo estás haciendo bien",
-    "No te rindas",
-    "Vales mucho",
-    "Todo mejorará"
+    "¡Feliz Cumpleaños!",
+    "Hoy es tu día especial",
+    "Que todos tus deseos se hagan realidad",
+    "Te deseo buenas vibras para hoy",
+    "Espero lo pases de lo mejor",
+    "Que la alegría te acompañe siempre",
+    "¡A celebrar tu vida!"
   ];
 
   const velocidadBase = 1.2;
@@ -140,23 +138,25 @@
   animar();
 
  const mensajesClick = [
-  "Ojalá hoy encuentres algo que te haga sentir en paz :3",
-  "No necesitas tenerlo todo claro para seguir adelante :>",
-  "Espero que hoy te trates con más suavidad<3",
-  "A veces resistir también es una forma de avanzar",
-  "Hay espacio para ti, tal como eres, en este mundo",
-  "Que tu cuerpo pueda descansar, sin culpa",
-  "No tienes que demostrar nada para merecer calma",
-  "Hay belleza en seguir, incluso sin fuerzas",
-  "Ojalá puedas ver la luz que otros ven en ti",
-  "Que tu corazón encuentre un respiro hoy<3",
-  "Suerte en tu camino Bee te deseo lo mejor del mundo:>"
+  "Que este año esté lleno de momentos felices! 🎉",
+  "Espero que recibas mucho amor y abrazos hoy 🪻",
+  "¡Que la vida te regale muchas sonrisas!",
+  "Celebra a lo grande, te lo mereces",
+  "¡feliz cumpleaños!",
+  "Que cada sueño tuyo se acerque un poquito más hoy",
+  "Hoy el mundo es más bonito porque es tu cumpleaños",
+  "¡Sofi, disfruta cada instante de tu día!",
+  "¡Sigue cumpliendo sueños, feliz cumpleaños!",
 ];
 
   let indiceMensaje = 0;
   let ultimoMensaje = "";
 
   document.addEventListener("click", function (event) {
+    const audio = document.getElementById("musica-fondo");
+    if (audio.paused) {
+      audio.play();
+    }
     let mensajeActual = mensajesClick[indiceMensaje];
     indiceMensaje = (indiceMensaje + 1) % mensajesClick.length;
 
@@ -179,7 +179,7 @@
 
       const flor = document.createElement("div");
       flor.className = "fuego";
-      flor.textContent = "🌸";
+      flor.textContent = "🪻";
       flor.style.left = `${event.clientX}px`;
       flor.style.top = `${event.clientY}px`;
       flor.style.setProperty("--x", `${offsetX}px`);
